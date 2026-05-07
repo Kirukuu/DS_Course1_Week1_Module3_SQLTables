@@ -7,15 +7,6 @@ pd.read_sql("""SELECT * FROM sqlite_master""", conn)
 
 # CodeGrade step1
 df_boston = pd.read_sql("""
-    SELECT e.firstName || ' ' || e.lastName AS name, e.jobTitle
-    FROM employees e
-    JOIN offices o ON e.officeCode = o.officeCode
-    WHERE o.city = 'Boston'
-""", conn)
-# 
-# 
-# 
-# pd.read_sql("""
 #     SELECT e.firstName, e.lastName, e.jobTitle
 #     FROM employees e
 #     JOIN offices o ON e.officeCode = o.officeCode
